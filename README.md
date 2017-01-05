@@ -6,3 +6,7 @@ Example: Notify me when the next Walking Dead comic is available online.
 
 # Tools
 
+AWS Lambda
+AWS SNS
+AWS Dynamo DB
+
