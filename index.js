@@ -77,7 +77,7 @@ function sendSNS(message_body) {
         var params = {
           Message: message_body,
           Subject: 'New Content available:',
-          TopicArn: 'arn:aws:sns:us-east-2:428588354930:NewComic'
+          TopicArn: '<your SNS ARN>'
         };
         sns.publish(params, function(err, data) {
           if (err) console.log(err, err.stack); // an error occurred
