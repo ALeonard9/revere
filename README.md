@@ -21,7 +21,7 @@ Example: Notify me when the next Walking Dead comic is available online.
 | pre_url  | (string) the url before the iterator | http://www.adamtv.com/myshow/  |
 | post_url | (string) the url after the iterator | /fullvideo |
 
-  Example site to be checked: http://www.adamtv.com/myshow/19/fullvideo
+  Ex) (fake) site to be checked: http://www.adamtv.com/myshow/19/fullvideo
 
 2) Create an sns topic and subscribe.
 
