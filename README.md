@@ -13,7 +13,8 @@ Example: Notify me when the next Walking Dead comic is available online.
 ## Usage
 
 1. Create a dynamodb table with the following columns: 
-|column|usage|example|
+
+| column | usage | example |
 |---|---|---|
 | web_id | unique identifier | 1 |
 | iterator  | (integer) numeric identifier for an instance |  19 |
