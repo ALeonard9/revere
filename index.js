@@ -5,7 +5,8 @@ AWS.config.update({
 
 var sns = new AWS.SNS();
 var dynamodb = new AWS.DynamoDB.DocumentClient()
-var table = 'Websites'
+var table = process.env.dynamo_table
+var sns_arn = process.env.sns_arn
 
 function constructUrls() {
   var urls = []
@@ -42,7 +43,7 @@ function constructUrls() {
                           Key: { 
                             'web_id': data['Items'][i]['web_id']
                           },
-                          TableName: 'Websites',
+                          TableName: table,
                           AttributeUpdates: {
                             iterator: {
                               Action: 'PUT',
@@ -77,7 +78,7 @@ function sendSNS(message_body) {
         var params = {
           Message: message_body,
           Subject: 'New Content available:',
-          TopicArn: '<your SNS ARN>'
+          TopicArn: sns_arn
         };
         sns.publish(params, function(err, data) {
           if (err) console.log(err, err.stack); // an error occurred
